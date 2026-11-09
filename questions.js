@@ -230,7 +230,7 @@ const QUESTIONS = [
     "id": 23,
     "part": "Part 2 — Multiple Choice Questions",
     "type": "mcq",
-    "category": "Apex Triggers — Undelete",
+    "category": "Apex Triggers",
     "scenario": "A user accidentally deletes a Contact and later restores it from the Recycle Bin. The developer wants to execute additional logic when the Contact is restored.",
     "question": "Which Apex Trigger event is executed when a record is restored from the Recycle Bin?",
     "options": [
@@ -260,7 +260,7 @@ const QUESTIONS = [
     "id": 25,
     "part": "Part 2 — Multiple Choice Questions",
     "type": "mcq",
-    "category": "Apex Testing — Introduction to Test Classes",
+    "category": "Apex Testing",
     "scenario": "A developer has written an Apex class and wants to create a test class to validate its functionality before deployment.",
     "question": "Which annotation is used to identify an Apex test class?",
     "options": [
@@ -275,7 +275,7 @@ const QUESTIONS = [
     "id": 26,
     "part": "Part 2 — Multiple Choice Questions",
     "type": "mcq",
-    "category": "Apex Testing — Test Execution",
+    "category": "Apex Testing",
     "scenario": "A developer wants to isolate the execution of the actual code being tested from the test data preparation portion to get accurate governor limit measurements.",
     "question": "Which methods are used to define the test execution boundary?",
     "options": [
@@ -290,7 +290,7 @@ const QUESTIONS = [
     "id": 27,
     "part": "Part 2 — Multiple Choice Questions",
     "type": "mcq",
-    "category": "Apex Testing — Assertions",
+    "category": "Apex Testing",
     "scenario": "A test method executes an Apex method that calculates a discount. The developer wants to verify whether the actual discount is equal to the expected discount.",
     "question": "Which System method should be used to compare the expected and actual values?",
     "options": [
@@ -305,7 +305,7 @@ const QUESTIONS = [
     "id": 28,
     "part": "Part 2 — Multiple Choice Questions",
     "type": "mcq",
-    "category": "Apex Testing — Trigger Test Classes",
+    "category": "Apex Testing",
     "scenario": "A Contact trigger prevents duplicate Contacts based on Email. A developer wants to verify that inserting a duplicate Contact throws an error.",
     "question": "Which approach should be used to verify the expected exception or DML error in the test class?",
     "options": [
@@ -320,7 +320,7 @@ const QUESTIONS = [
     "id": 29,
     "part": "Part 2 — Multiple Choice Questions",
     "type": "mcq",
-    "category": "Apex Testing — Test Data Factory",
+    "category": "Apex Testing",
     "scenario": "A development team has multiple test classes that require Account, Contact, and Opportunity records. The team wants to avoid writing the same test data creation logic repeatedly.",
     "question": "Which approach is most appropriate?",
     "options": [
@@ -335,7 +335,7 @@ const QUESTIONS = [
     "id": 30,
     "part": "Part 2 — Multiple Choice Questions",
     "type": "mcq",
-    "category": "Apex Testing — Test Data Preparation",
+    "category": "Apex Testing",
     "scenario": "A developer wants to create common test records once and reuse them across multiple test methods within the same test class.",
     "question": "Which annotation should be used for the common test data creation method?",
     "options": [
@@ -350,7 +350,7 @@ const QUESTIONS = [
     "id": 31,
     "part": "Part 2 — Multiple Choice Questions",
     "type": "mcq",
-    "category": "Async Apex — Future Methods",
+    "category": "Async Apex",
     "scenario": "A developer wants to execute an HTTP callout asynchronously from Apex using a Future Method.",
     "question": "Which annotation should be used to allow a Future Method to perform HTTP callouts?",
     "options": [
@@ -365,7 +365,7 @@ const QUESTIONS = [
     "id": 32,
     "part": "Part 2 — Multiple Choice Questions",
     "type": "mcq",
-    "category": "Async Apex — Batch Apex",
+    "category": "Async Apex",
     "scenario": "A company needs to process 300,000 Account records asynchronously. The developer wants to divide the records into smaller groups for processing.",
     "question": "Which Batch Apex method is responsible for processing each group of records?",
     "options": [
@@ -380,7 +380,7 @@ const QUESTIONS = [
     "id": 33,
     "part": "Part 2 — Multiple Choice Questions",
     "type": "mcq",
-    "category": "Async Apex — Batch Apex",
+    "category": "Async Apex",
     "scenario": "A developer implements Batch Apex and wants to retrieve a large number of records for processing without being restricted by the normal SOQL query row limit.",
     "question": "Which return type can be used in the start() method to retrieve up to 50 million records?",
     "options": [
@@ -395,7 +395,7 @@ const QUESTIONS = [
     "id": 34,
     "part": "Part 2 — Multiple Choice Questions",
     "type": "mcq",
-    "category": "Async Apex — Schedulable Apex",
+    "category": "Async Apex",
     "scenario": "A company wants to execute an Apex class automatically every Sunday at midnight.",
     "question": "Which interface should the Apex class implement to schedule its execution?",
     "options": [
@@ -410,7 +410,7 @@ const QUESTIONS = [
     "id": 35,
     "part": "Part 2 — Multiple Choice Questions",
     "type": "mcq",
-    "category": "Async Apex — Queueable Apex",
+    "category": "Async Apex",
     "scenario": "A developer needs to execute an asynchronous process that accepts a complex Apex object as input and wants to monitor the execution through a job ID.",
     "question": "Which method is used to submit a Queueable Apex job?",
     "options": [
@@ -425,7 +425,7 @@ const QUESTIONS = [
     "id": 36,
     "part": "Part 2 — Multiple Choice Questions",
     "type": "mcq",
-    "category": "Async Apex — Monitoring Jobs",
+    "category": "Async Apex",
     "scenario": "A developer has submitted a Queueable Apex job and wants to check whether the job is queued, processing, completed, or failed.",
     "question": "Which Salesforce object stores information about asynchronous Apex jobs?",
     "options": [
@@ -440,7 +440,7 @@ const QUESTIONS = [
     "id": 37,
     "part": "Part 2 — Multiple Choice Questions",
     "type": "mcq",
-    "category": "Integration using Apex — REST Callouts",
+    "category": "Integration using Apex",
     "scenario": "A developer wants to send an HTTP request from Salesforce to an external REST API and receive the response.",
     "question": "Which Apex classes are commonly used to perform an HTTP callout?",
     "options": [
@@ -455,7 +455,7 @@ const QUESTIONS = [
     "id": 38,
     "part": "Part 2 — Multiple Choice Questions",
     "type": "mcq",
-    "category": "Integration using Apex — SOAP Callouts",
+    "category": "Integration using Apex",
     "scenario": "A company receives a WSDL file from an external banking application and wants to generate Apex classes to invoke its SOAP services.",
     "question": "Which Salesforce tool is used to generate Apex classes from a WSDL file?",
     "options": [
@@ -470,7 +470,7 @@ const QUESTIONS = [
     "id": 39,
     "part": "Part 2 — Multiple Choice Questions",
     "type": "mcq",
-    "category": "Integration using Apex — Named Credentials and OAuth 2.0",
+    "category": "Integration using Apex",
     "scenario": "A developer has hardcoded an external API endpoint and authentication details inside an Apex class. The company wants to securely manage the endpoint and authentication configuration.",
     "question": "Which Salesforce feature is recommended for managing external endpoint and authentication configuration?",
     "options": [
@@ -485,7 +485,7 @@ const QUESTIONS = [
     "id": 40,
     "part": "Part 2 — Multiple Choice Questions",
     "type": "mcq",
-    "category": "Integration using Apex — Connected Apps",
+    "category": "Integration using Apex",
     "scenario": "An external application needs to authenticate with Salesforce using OAuth 2.0 and access Salesforce data through REST APIs.",
     "question": "Which Salesforce feature should be configured to enable this OAuth-based integration?",
     "options": [
