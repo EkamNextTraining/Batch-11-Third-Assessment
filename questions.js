@@ -12,490 +12,490 @@ const QUESTIONS = [
   // ══════════════════════════════════════════════════════════════
 
   {
-  id: 1,
-  part: "Part 1 — Scenario Questions",
-  type: "scenario",
-  category: "Introduction to Test Classes",
-  scenario: "A developer creates an Apex class but forgets to write a corresponding test class. During deployment to production, the deployment fails.",
-  question: "Why is a test class required before deploying Apex code to production? What is the minimum code coverage required, and how is it calculated?",
-  placeholder: "Enter your answer..."
-},
-{
-  id: 2,
-  part: "Part 1 — Scenario Questions",
-  type: "scenario",
-  category: "Unit Testing",
-  scenario: "A test method inserts an Account and updates it, but no assertions are written. The test passes successfully.",
-  question: "Why are assertions important in Apex test classes? Write two assertions you would use to verify the Account update.",
-  placeholder: "Enter your answer..."
-},
-{
-  id: 3,
-  part: "Part 1 — Scenario Questions",
-  type: "scenario",
-  category: "Test Classes for Apex Triggers",
-  scenario: "An after insert trigger creates a Task whenever an Account is created. The trigger has 90% code coverage but the Task creation logic is never verified.",
-  question: "How would you write a test class to verify that the trigger creates the Task correctly? Which assertions would you use?",
-  placeholder: "Enter your answer..."
-},
-{
-  id: 4,
-  part: "Part 1 — Scenario Questions",
-  type: "scenario",
-  category: "Test Data Factory",
-  scenario: "Five different test classes create the same Account and Contact records repeatedly, resulting in duplicated code.",
-  question: "How can a Test Data Factory class solve this problem? Explain its advantages and write the approach you would follow.",
-  placeholder: "Enter your answer..."
-},
-{
-  id: 5,
-  part: "Part 1 — Scenario Questions",
-  type: "scenario",
-  category: "Future Methods",
-  scenario: "A trigger performs an HTTP callout after an Opportunity is inserted. The transaction fails with a callout exception.",
-  question: "Why can't a synchronous trigger perform this operation? How would a Future Method solve the problem? Mention its limitations.",
-  placeholder: "Enter your answer..."
-},
-{
-  id: 6,
-  part: "Part 1 — Scenario Questions",
-  type: "scenario",
-  category: "Queueable Apex",
-  scenario: "A developer needs to process thousands of Account records asynchronously and also pass complex objects to the job.",
-  question: "Why is Queueable Apex a better choice than Future Methods for this requirement? Explain the advantages.",
-  placeholder: "Enter your answer..."
-},
-{
-  id: 7,
-  part: "Part 1 — Scenario Questions",
-  type: "scenario",
-  category: "Batch Apex",
-  scenario: "An organization needs to update 2 million Account records overnight.",
-  question: "Why should Batch Apex be used instead of a normal Apex class? Explain the purpose of the start(), execute(), and finish() methods.",
-  placeholder: "Enter your answer..."
-},
-{
-  id: 8,
-  part: "Part 1 — Scenario Questions",
-  type: "scenario",
-  category: "Schedulable Apex",
-  scenario: "Every Monday at 8:00 AM, expired Opportunities must be archived automatically.",
-  question: "How would you schedule this job using Schedulable Apex? Explain the Scheduler interface and CRON expression.",
-  placeholder: "Enter your answer..."
-},
-{
-  id: 9,
-  part: "Part 1 — Scenario Questions",
-  type: "scenario",
-  category: "Monitoring Async Apex",
-  scenario: "A Batch Apex job failed during execution and the administrator wants to know its status and failure details.",
-  question: "How can asynchronous Apex jobs be monitored in Salesforce? Which object stores the job information?",
-  placeholder: "Enter your answer..."
-},
-{
-  id: 10,
-  part: "Part 1 — Scenario Questions",
-  type: "scenario",
-  category: "REST Callouts",
-  scenario: "An Apex class must retrieve customer details from an external REST API.",
-  question: "Explain how an Apex REST callout is performed using HttpRequest and HttpResponse. What steps are required?",
-  placeholder: "Enter your answer..."
-},
-{
-  id: 11,
-  part: "Part 1 — Scenario Questions",
-  type: "scenario",
-  category: "Named Credentials",
-  scenario: "The authentication token of an external API changes frequently, requiring code changes every time.",
-  question: "How do Named Credentials simplify authentication? Why are they preferred over hardcoding credentials?",
-  placeholder: "Enter your answer..."
-},
-{
-  id: 12,
-  part: "Part 1 — Scenario Questions",
-  type: "scenario",
-  category: "OAuth 2.0 & Connected App",
-  scenario: "An external application needs secure access to Salesforce APIs.",
-  question: "What is the purpose of a Connected App? Explain how OAuth 2.0 is used to authenticate external applications.",
-  placeholder: "Enter your answer..."
-},
-{
-  id: 13,
-  part: "Part 1 — Scenario Questions",
-  type: "scenario",
-  category: "Apex Web Services",
-  scenario: "Another system needs to create Account records in Salesforce using Apex.",
-  question: "How can you expose an Apex class as a web service? Explain the required annotations.",
-  placeholder: "Enter your answer..."
-},
-{
-  id: 14,
-  part: "Part 1 — Scenario Questions",
-  type: "scenario",
-  category: "SOQL Security",
-  scenario: "A custom Apex class retrieves Salary__c values even though some users do not have field access.",
-  question: "How does WITH SECURITY_ENFORCED solve this problem? What happens if the user does not have field access?",
-  placeholder: "Enter your answer..."
-},
-{
-  id: 15,
-  part: "Part 1 — Scenario Questions",
-  type: "scenario",
-  category: "Security with DML",
-  scenario: "An Apex class updates fields that the running user does not have permission to edit.",
-  question: "How can Security.stripInaccessible() help before performing DML? Explain its purpose.",
-  placeholder: "Enter your answer..."
-},
-{
-  id: 16,
-  part: "Part 1 — Scenario Questions",
-  type: "scenario",
-  category: "Sharing Keywords",
-  scenario: "A utility class should always enforce record-level security regardless of who calls it.",
-  question: "Compare with sharing, without sharing, and inherited sharing. Which keyword should be used in this scenario and why?",
-  placeholder: "Enter your answer..."
-},
-{
-  id: 17,
-  part: "Part 1 — Scenario Questions",
-  type: "scenario",
-  category: "Data Import Wizard",
-  scenario: "A business user wants to import 20,000 Account records without writing Apex code.",
-  question: "Would you recommend Data Import Wizard or Data Loader? Explain your choice and its limitations.",
-  placeholder: "Enter your answer..."
-},
-{
-  id: 18,
-  part: "Part 1 — Scenario Questions",
-  type: "scenario",
-  category: "Data Loader",
-  scenario: "An administrator must update 500,000 Contact records using an External ID.",
-  question: "Why is Data Loader the preferred tool? Explain how the update or upsert operation would be performed.",
-  placeholder: "Enter your answer..."
-},
-{
-  id: 19,
-  part: "Part 1 — Scenario Questions",
-  type: "scenario",
-  category: "Bulk Upload",
-  scenario: "After importing records with Data Loader, several records failed while others succeeded.",
-  question: "Which files generated by Data Loader help identify successful and failed records? How would you resolve the failures?",
-  placeholder: "Enter your answer..."
-},
-{
-  id: 20,
-  part: "Part 1 — Scenario Questions",
-  type: "scenario",
-  category: "Revision",
-  scenario: "You are reviewing an Apex application that includes asynchronous processing, integrations, security, test classes, and data migration.",
-  question: "List at least five best practices you would follow before deploying the application to production.",
-  placeholder: "Enter your answer..."
-},
+    "id": 1,
+    "part": "Part 1 — Scenario Questions",
+    "type": "scenario",
+    "category": "Apex Triggers — Before and After Triggers",
+    "scenario": "A company wants to automatically convert the Account Name into uppercase before saving a new Account record. Additionally, whenever an Account is created, a related Contact record should be created automatically.",
+    "question": "Which trigger events would you use to implement both requirements? Explain the difference between Before and After triggers and when each should be used.",
+    "placeholder": "Enter your answer..."
+  },
+  {
+    "id": 2,
+    "part": "Part 1 — Scenario Questions",
+    "type": "scenario",
+    "category": "Apex Trigger Events — Insert, Update, Delete and Undelete",
+    "scenario": "A company wants to maintain the total number of active Contacts related to each Account. The count should increase when a Contact is inserted or restored from the Recycle Bin and decrease when a Contact is deleted.",
+    "question": "Which Apex trigger events would you use to handle these operations? Explain how Insert, Update, Delete, and Undelete trigger events work and how you would maintain the correct Contact count.",
+    "placeholder": "Enter your answer..."
+  },
+  {
+    "id": 3,
+    "part": "Part 1 — Scenario Questions",
+    "type": "scenario",
+    "category": "Apex Triggers — Update Trigger",
+    "scenario": "A company wants to create an Opportunity History custom record whenever an Opportunity Stage is changed. The history record should contain the previous Stage, new Stage, Opportunity Name, and modification date. No history record should be created when other Opportunity fields are updated.",
+    "question": "How would you implement this requirement using an Apex Update Trigger? Explain how Trigger.oldMap and Trigger.new can be used to identify changes in field values.",
+    "placeholder": "Enter your answer..."
+  },
+  {
+    "id": 4,
+    "part": "Part 1 — Scenario Questions",
+    "type": "scenario",
+    "category": "Apex Triggers — Delete and Undelete",
+    "scenario": "A company wants to prevent users from deleting an Account if it has any related Opportunities in the Closed Won stage. However, if an Account is deleted and later restored, the company wants to update a custom field indicating that the Account was recovered.",
+    "question": "Which Apex trigger events and context variables would you use to implement these requirements? Explain how addError() can prevent record deletion.",
+    "placeholder": "Enter your answer..."
+  },
+  {
+    "id": 5,
+    "part": "Part 1 — Scenario Questions",
+    "type": "scenario",
+    "category": "Apex Triggers — Bulkification",
+    "scenario": "A company inserts 200 Account records in a single transaction. Whenever an Account is created, the system must create three related Contacts for each Account. The current trigger executes a SOQL query and performs DML operations inside a for loop, resulting in governor limit exceptions.",
+    "question": "How would you redesign this trigger using Apex bulkification best practices? Explain the use of collections, SOQL outside loops, and bulk DML operations.",
+    "placeholder": "Enter your answer..."
+  },
+  {
+    "id": 6,
+    "part": "Part 1 — Scenario Questions",
+    "type": "scenario",
+    "category": "Governor Limits and Trigger Best Practices",
+    "scenario": "A company has multiple Apex triggers and helper classes executing during a single transaction. Users are receiving Too Many SOQL Queries and Too Many DML Statements exceptions while performing bulk updates.",
+    "question": "What are Salesforce Governor Limits, and how would you identify and resolve these exceptions? Explain the best practices you would follow while designing Apex Triggers.",
+    "placeholder": "Enter your answer..."
+  },
+  {
+    "id": 7,
+    "part": "Part 1 — Scenario Questions",
+    "type": "scenario",
+    "category": "Apex Testing — Introduction to Test Classes",
+    "scenario": "A developer has completed an Apex class that creates an Account and related Contacts. Before deploying the class to production, the developer needs to verify that the functionality works correctly.",
+    "question": "Why are Apex Test Classes required in Salesforce? Explain how you would write a test class using @isTest, Test.startTest(), Test.stopTest(), and System.assertEquals().",
+    "placeholder": "Enter your answer..."
+  },
+  {
+    "id": 8,
+    "part": "Part 1 — Scenario Questions",
+    "type": "scenario",
+    "category": "Apex Testing — Unit Testing",
+    "scenario": "A developer has written an Apex method that calculates a discount based on the Opportunity Amount. The method supports different discount percentages depending on the amount range. The developer wants to verify all possible scenarios.",
+    "question": "How would you write unit test methods to validate the different discount conditions? Explain positive testing, negative testing, boundary testing, and the use of assertions.",
+    "placeholder": "Enter your answer..."
+  },
+  {
+    "id": 9,
+    "part": "Part 1 — Scenario Questions",
+    "type": "scenario",
+    "category": "Apex Testing — Trigger Test Classes",
+    "scenario": "A Contact trigger prevents duplicate Contacts based on Email and Phone. The trigger also updates a custom Contact Count field on the related Account whenever Contacts are inserted or deleted.",
+    "question": "How would you write a test class to validate this trigger functionality? Explain how you would test successful insertions, duplicate record prevention, deletion, and Account count updates.",
+    "placeholder": "Enter your answer..."
+  },
+  {
+    "id": 10,
+    "part": "Part 1 — Scenario Questions",
+    "type": "scenario",
+    "category": "Apex Testing — Test Data Factory",
+    "scenario": "A development team has 15 Apex test classes, and every test class independently creates Accounts, Contacts, Opportunities, and custom object records. Maintaining test data across all these classes has become difficult.",
+    "question": "How would you implement a Test Data Factory to create reusable test records? Explain how a factory class improves code reusability, maintainability, and test data preparation.",
+    "placeholder": "Enter your answer..."
+  },
+  {
+    "id": 11,
+    "part": "Part 1 — Scenario Questions",
+    "type": "scenario",
+    "category": "Apex Testing — Test Data Preparation",
+    "scenario": "A developer is writing a test class for an Apex method that retrieves Accounts based on Industry and Rating. The test class works in the developer's environment but fails in another Salesforce organization because the required Account records are not available.",
+    "question": "Why should test classes create their own test data instead of depending on existing organization records? Explain the purpose of @testSetup, SeeAllData=false, and reusable test data preparation methods.",
+    "placeholder": "Enter your answer..."
+  },
+  {
+    "id": 12,
+    "part": "Part 1 — Scenario Questions",
+    "type": "scenario",
+    "category": "Async Apex — Future Methods",
+    "scenario": "Whenever an Account is updated, the company wants to send its Account details to an external application through an HTTP callout. The callout should execute asynchronously so that the main transaction does not wait for the external system.",
+    "question": "How would you implement this requirement using a Future Method? Explain the use of @future(callout=true), static methods, supported parameter types, and the limitations of Future Methods.",
+    "placeholder": "Enter your answer..."
+  },
+  {
+    "id": 13,
+    "part": "Part 1 — Scenario Questions",
+    "type": "scenario",
+    "category": "Async Apex — Batch Apex",
+    "scenario": "A company has more than 500,000 Contact records and wants to update a custom field called Customer_Status__c for all Contacts based on their Account Industry. Processing all records synchronously causes governor limit exceptions.",
+    "question": "How would you implement this requirement using Batch Apex? Explain the purpose of start(), execute(), and finish() methods, Database.QueryLocator, and batch scope size.",
+    "placeholder": "Enter your answer..."
+  },
+  {
+    "id": 14,
+    "part": "Part 1 — Scenario Questions",
+    "type": "scenario",
+    "category": "Async Apex — Schedulable Apex",
+    "scenario": "A company wants to execute an Apex process every day at midnight to identify Accounts that have not been modified for the last 90 days and update their status to Inactive.",
+    "question": "How would you implement this requirement using Schedulable Apex? Explain the use of the Schedulable interface, execute() method, System.schedule(), and Cron expressions.",
+    "placeholder": "Enter your answer..."
+  },
+  {
+    "id": 15,
+    "part": "Part 1 — Scenario Questions",
+    "type": "scenario",
+    "category": "Async Apex — Queueable Apex",
+    "scenario": "A company needs to process a group of Account records asynchronously. During processing, the system must pass a complex data structure containing Account details and related Contact information to the asynchronous process. The process may also need to chain another asynchronous job.",
+    "question": "How would you implement this requirement using Queueable Apex? Explain the Queueable interface, execute() method, System.enqueueJob(), job chaining, and how Queueable Apex differs from Future Methods.",
+    "placeholder": "Enter your answer..."
+  },
+  {
+    "id": 16,
+    "part": "Part 1 — Scenario Questions",
+    "type": "scenario",
+    "category": "Async Apex — Monitoring and Troubleshooting",
+    "scenario": "A developer has scheduled a Batch Apex job to process 100,000 records. The job was submitted successfully, but some records are not updated, and the developer wants to identify whether the job completed, failed, or is still processing.",
+    "question": "How would you monitor and troubleshoot asynchronous Apex jobs? Explain the use of Apex Jobs, AsyncApexJob, CronTrigger, and relevant job status information.",
+    "placeholder": "Enter your answer..."
+  },
+  {
+    "id": 17,
+    "part": "Part 1 — Scenario Questions",
+    "type": "scenario",
+    "category": "Integration using Apex — REST Callouts",
+    "scenario": "A company wants to integrate Salesforce with an external employee management application. Salesforce must send employee details through an HTTP POST request and receive employee information in JSON format.",
+    "question": "How would you implement this integration using Apex REST Callouts? Explain HttpRequest, HttpResponse, Http, HTTP methods, JSON serialization, and JSON deserialization.",
+    "placeholder": "Enter your answer..."
+  },
+  {
+    "id": 18,
+    "part": "Part 1 — Scenario Questions",
+    "type": "scenario",
+    "category": "Integration using Apex — SOAP Callouts",
+    "scenario": "A company uses an external banking application that exposes its services through SOAP Web Services. Salesforce must invoke the banking service to retrieve payment details and process the response.",
+    "question": "How would you integrate Salesforce with the external SOAP service using Apex? Explain WSDL, WSDL2Apex, generated Apex classes, and how SOAP callouts differ from REST callouts.",
+    "placeholder": "Enter your answer..."
+  },
+  {
+    "id": 19,
+    "part": "Part 1 — Scenario Questions",
+    "type": "scenario",
+    "category": "Integration using Apex — Named Credentials and OAuth 2.0",
+    "scenario": "A company wants to connect Salesforce to a third-party REST API that requires OAuth 2.0 authentication. The current implementation stores the API endpoint, client credentials, and access token directly inside an Apex class.",
+    "question": "How would you redesign this integration using Named Credentials, External Credentials, and OAuth 2.0? Explain how these features improve authentication, security, and maintainability.",
+    "placeholder": "Enter your answer..."
+  },
+  {
+    "id": 20,
+    "part": "Part 1 — Scenario Questions",
+    "type": "scenario",
+    "category": "Integration using Apex — Connected Apps",
+    "scenario": "An external application wants to authenticate with Salesforce and access Salesforce records through REST APIs. The company wants to configure a secure authentication mechanism instead of sharing Salesforce usernames and passwords.",
+    "question": "How would you configure a Connected App for this integration? Explain the purpose of OAuth 2.0, Consumer Key, Consumer Secret, callback URL, OAuth scopes, and access tokens.",
+    "placeholder": "Enter your answer..."
+  },
 
   // ══════════════════════════════════════════════════════════════
   //  PART 2 — MCQ  (Q21 – Q40)
   // ══════════════════════════════════════════════════════════════
 
+   {
+    "id": 21,
+    "part": "Part 2 — Multiple Choice Questions",
+    "type": "mcq",
+    "category": "Apex Triggers — Before and After",
+    "scenario": "A developer wants to update the Account Name before the Account record is saved into the database. The developer does not want to perform an additional DML operation.",
+    "question": "Which Apex Trigger event should be used?",
+    "options": [
+      "After Insert",
+      "Before Insert",
+      "After Update",
+      "After Delete"
+    ],
+    "answer": 1
+  },
   {
-  id: 21,
-  part: "Part 2 — Multiple Choice Questions",
-  type: "mcq",
-  category: "Introduction to Test Classes",
-  scenario: "A developer creates an Apex class and attempts to deploy it to production without writing a test class.",
-  question: "Why does Salesforce require Apex test classes before deployment?",
-  options: [
-    "To improve UI performance",
-    "To achieve the required code coverage and validate functionality",
-    "To reduce governor limits",
-    "To enable debug logs"
-  ],
-  answer: 1
-},
-{
-  id: 22,
-  part: "Part 2 — Multiple Choice Questions",
-  type: "mcq",
-  category: "Unit Testing",
-  scenario: "A developer writes a test method that performs DML operations but never verifies the results.",
-  question: "Which Apex method should be used to verify expected outcomes in a test class?",
-  options: [
-    "System.debug()",
-    "System.assert()",
-    "Database.insert()",
-    "Test.startTest()"
-  ],
-  answer: 1
-},
-{
-  id: 23,
-  part: "Part 2 — Multiple Choice Questions",
-  type: "mcq",
-  category: "Test Classes for Apex Triggers",
-  scenario: "A trigger creates a Task after an Account is inserted.",
-  question: "What should a test class verify after inserting the Account?",
-  options: [
-    "That debug logs are generated",
-    "That the Task record is created successfully",
-    "That governor limits increase",
-    "That the trigger is disabled"
-  ],
-  answer: 1
-},
-{
-  id: 24,
-  part: "Part 2 — Multiple Choice Questions",
-  type: "mcq",
-  category: "Test Data Factory",
-  scenario: "Several test classes repeatedly create the same Account and Contact records.",
-  question: "What is the primary purpose of a Test Data Factory class?",
-  options: [
-    "To execute asynchronous jobs",
-    "To reuse common test data creation logic",
-    "To deploy metadata",
-    "To improve SOQL performance"
-  ],
-  answer: 1
-},
-{
-  id: 25,
-  part: "Part 2 — Multiple Choice Questions",
-  type: "mcq",
-  category: "Future Methods",
-  scenario: "A trigger needs to perform a REST callout after inserting a record.",
-  question: "Which annotation is required for an Apex Future Method performing a callout?",
-  options: [
-    "@future",
-    "@future(callout=true)",
-    "@AuraEnabled",
-    "@InvocableMethod"
-  ],
-  answer: 1
-},
-{
-  id: 26,
-  part: "Part 2 — Multiple Choice Questions",
-  type: "mcq",
-  category: "Queueable Apex",
-  scenario: "A developer needs to pass a List<Account> to an asynchronous job.",
-  question: "Which asynchronous Apex feature supports passing complex objects?",
-  options: [
-    "Future Method",
-    "Workflow Rule",
-    "Queueable Apex",
-    "Schedulable Apex"
-  ],
-  answer: 2
-},
-{
-  id: 27,
-  part: "Part 2 — Multiple Choice Questions",
-  type: "mcq",
-  category: "Batch Apex",
-  scenario: "An organization must process 5 million Contact records.",
-  question: "Which Apex feature is best suited for processing this large data volume?",
-  options: [
-    "Future Method",
-    "Queueable Apex",
-    "Batch Apex",
-    "Anonymous Apex"
-  ],
-  answer: 2
-},
-{
-  id: 28,
-  part: "Part 2 — Multiple Choice Questions",
-  type: "mcq",
-  category: "Schedulable Apex",
-  scenario: "A developer wants an Apex job to execute every night at 12:00 AM.",
-  question: "Which interface must the Apex class implement?",
-  options: [
-    "Database.Batchable",
-    "Schedulable",
-    "Queueable",
-    "Iterable"
-  ],
-  answer: 1
-},
-{
-  id: 29,
-  part: "Part 2 — Multiple Choice Questions",
-  type: "mcq",
-  category: "Monitoring Async Apex",
-  scenario: "An administrator wants to check whether a Batch Apex job completed successfully.",
-  question: "Which Salesforce object stores asynchronous job information?",
-  options: [
-    "CronTrigger",
-    "AsyncApexJob",
-    "ApexLog",
-    "EventLogFile"
-  ],
-  answer: 1
-},
-{
-  id: 30,
-  part: "Part 2 — Multiple Choice Questions",
-  type: "mcq",
-  category: "REST Callouts",
-  scenario: "An Apex class needs to consume data from an external REST API.",
-  question: "Which Apex class is used to send the HTTP request?",
-  options: [
-    "HttpRequest",
-    "WebServiceCallout",
-    "JSONParser",
-    "RestContext"
-  ],
-  answer: 0
-},
-{
-  id: 31,
-  part: "Part 2 — Multiple Choice Questions",
-  type: "mcq",
-  category: "Named Credentials",
-  scenario: "A developer wants to avoid hardcoding usernames and passwords in Apex.",
-  question: "Which Salesforce feature should be used?",
-  options: [
-    "Connected App",
-    "Remote Site Settings",
-    "Named Credentials",
-    "Custom Labels"
-  ],
-  answer: 2
-},
-{
-  id: 32,
-  part: "Part 2 — Multiple Choice Questions",
-  type: "mcq",
-  category: "OAuth 2.0",
-  scenario: "An external application needs secure access to Salesforce APIs.",
-  question: "Which authentication protocol is primarily used?",
-  options: [
-    "SOAP",
-    "OAuth 2.0",
-    "FTP",
-    "SAML Only"
-  ],
-  answer: 1
-},
-{
-  id: 33,
-  part: "Part 2 — Multiple Choice Questions",
-  type: "mcq",
-  category: "Connected App",
-  scenario: "A mobile application needs to authenticate with Salesforce.",
-  question: "Which Salesforce component is required?",
-  options: [
-    "Permission Set",
-    "Connected App",
-    "Validation Rule",
-    "Workflow Rule"
-  ],
-  answer: 1
-},
-{
-  id: 34,
-  part: "Part 2 — Multiple Choice Questions",
-  type: "mcq",
-  category: "Apex Web Services",
-  scenario: "A developer wants to expose an Apex method so external systems can invoke it.",
-  question: "Which annotation is commonly used to expose a REST endpoint?",
-  options: [
-    "@RestResource",
-    "@future",
-    "@InvocableMethod",
-    "@AuraEnabled"
-  ],
-  answer: 0
-},
-{
-  id: 35,
-  part: "Part 2 — Multiple Choice Questions",
-  type: "mcq",
-  category: "SOQL Security",
-  scenario: "A query should fail if the running user does not have access to one of the selected fields.",
-  question: "Which SOQL clause enforces field-level security automatically?",
-  options: [
-    "WITH USER_MODE",
-    "WITH SECURITY_ENFORCED",
-    "FOR UPDATE",
-    "ALL ROWS"
-  ],
-  answer: 1
-},
-{
-  id: 36,
-  part: "Part 2 — Multiple Choice Questions",
-  type: "mcq",
-  category: "Security with DML",
-  scenario: "Before updating records, inaccessible fields should be removed automatically.",
-  question: "Which Apex method performs this task?",
-  options: [
-    "Security.stripInaccessible()",
-    "Database.update()",
-    "System.assert()",
-    "Schema.describeSObjects()"
-  ],
-  answer: 0
-},
-{
-  id: 37,
-  part: "Part 2 — Multiple Choice Questions",
-  type: "mcq",
-  category: "Sharing Keywords",
-  scenario: "A class must always respect the current user's record-level sharing rules.",
-  question: "Which keyword should be used?",
-  options: [
-    "without sharing",
-    "with sharing",
-    "global sharing",
-    "private sharing"
-  ],
-  answer: 1
-},
-{
-  id: 38,
-  part: "Part 2 — Multiple Choice Questions",
-  type: "mcq",
-  category: "Data Import Wizard",
-  scenario: "A business user needs to import 20,000 Account records without using an API tool.",
-  question: "Which Salesforce tool is the best choice?",
-  options: [
-    "Workbench",
-    "Data Loader",
-    "Data Import Wizard",
-    "Developer Console"
-  ],
-  answer: 2
-},
-{
-  id: 39,
-  part: "Part 2 — Multiple Choice Questions",
-  type: "mcq",
-  category: "Data Loader",
-  scenario: "An administrator must update 500,000 Contact records.",
-  question: "Which tool is recommended for this requirement?",
-  options: [
-    "Data Import Wizard",
-    "Data Loader",
-    "Schema Builder",
-    "Process Builder"
-  ],
-  answer: 1
-},
-{
-  id: 40,
-  part: "Part 2 — Multiple Choice Questions",
-  type: "mcq",
-  category: "Bulk Upload",
-  scenario: "After performing a bulk upload, some records failed while others succeeded.",
-  question: "Which Data Loader output file contains the failed records and error messages?",
-  options: [
-    "Success.csv",
-    "Export.csv",
-    "Error.csv",
-    "Log.csv"
-  ],
-  answer: 2
-},
+    "id": 22,
+    "part": "Part 2 — Multiple Choice Questions",
+    "type": "mcq",
+    "category": "Apex Trigger Events",
+    "scenario": "A developer wants to access the records that are being deleted and perform additional processing before they are permanently removed.",
+    "question": "Which trigger context variable contains the records being deleted?",
+    "options": [
+      "Trigger.new",
+      "Trigger.newMap",
+      "Trigger.old",
+      "Trigger.newMap and Trigger.oldMap"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 23,
+    "part": "Part 2 — Multiple Choice Questions",
+    "type": "mcq",
+    "category": "Apex Triggers — Undelete",
+    "scenario": "A user accidentally deletes a Contact and later restores it from the Recycle Bin. The developer wants to execute additional logic when the Contact is restored.",
+    "question": "Which Apex Trigger event is executed when a record is restored from the Recycle Bin?",
+    "options": [
+      "After Insert",
+      "Before Update",
+      "After Undelete",
+      "Before Delete"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 24,
+    "part": "Part 2 — Multiple Choice Questions",
+    "type": "mcq",
+    "category": "Bulkification and Governor Limits",
+    "scenario": "A developer writes an Apex Trigger that processes 200 Account records. The trigger performs one SOQL query for every Account inside a for loop.",
+    "question": "What is the best practice to avoid exceeding the SOQL query governor limit?",
+    "options": [
+      "Increase the SOQL query limit",
+      "Move SOQL queries outside loops and use collections",
+      "Use multiple triggers for the same object",
+      "Execute a separate transaction for every Account"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 25,
+    "part": "Part 2 — Multiple Choice Questions",
+    "type": "mcq",
+    "category": "Apex Testing — Introduction to Test Classes",
+    "scenario": "A developer has written an Apex class and wants to create a test class to validate its functionality before deployment.",
+    "question": "Which annotation is used to identify an Apex test class?",
+    "options": [
+      "@AuraEnabled",
+      "@Future",
+      "@isTest",
+      "@InvocableMethod"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 26,
+    "part": "Part 2 — Multiple Choice Questions",
+    "type": "mcq",
+    "category": "Apex Testing — Test Execution",
+    "scenario": "A developer wants to isolate the execution of the actual code being tested from the test data preparation portion to get accurate governor limit measurements.",
+    "question": "Which methods are used to define the test execution boundary?",
+    "options": [
+      "Test.begin() and Test.end()",
+      "Test.startTest() and Test.stopTest()",
+      "System.start() and System.stop()",
+      "Test.execute() and Test.finish()"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 27,
+    "part": "Part 2 — Multiple Choice Questions",
+    "type": "mcq",
+    "category": "Apex Testing — Assertions",
+    "scenario": "A test method executes an Apex method that calculates a discount. The developer wants to verify whether the actual discount is equal to the expected discount.",
+    "question": "Which System method should be used to compare the expected and actual values?",
+    "options": [
+      "System.debug()",
+      "System.assertEquals()",
+      "System.addError()",
+      "System.enqueueJob()"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 28,
+    "part": "Part 2 — Multiple Choice Questions",
+    "type": "mcq",
+    "category": "Apex Testing — Trigger Test Classes",
+    "scenario": "A Contact trigger prevents duplicate Contacts based on Email. A developer wants to verify that inserting a duplicate Contact throws an error.",
+    "question": "Which approach should be used to verify the expected exception or DML error in the test class?",
+    "options": [
+      "Use Test.isRunningTest()",
+      "Use Database.insert() with allOrNone=false and verify the SaveResult error",
+      "Use System.debug() only",
+      "Use Test.startTest() without assertions"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 29,
+    "part": "Part 2 — Multiple Choice Questions",
+    "type": "mcq",
+    "category": "Apex Testing — Test Data Factory",
+    "scenario": "A development team has multiple test classes that require Account, Contact, and Opportunity records. The team wants to avoid writing the same test data creation logic repeatedly.",
+    "question": "Which approach is most appropriate?",
+    "options": [
+      "Create all records manually in every test method",
+      "Use existing production records",
+      "Create a reusable Test Data Factory class",
+      "Disable test data creation"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 30,
+    "part": "Part 2 — Multiple Choice Questions",
+    "type": "mcq",
+    "category": "Apex Testing — Test Data Preparation",
+    "scenario": "A developer wants to create common test records once and reuse them across multiple test methods within the same test class.",
+    "question": "Which annotation should be used for the common test data creation method?",
+    "options": [
+      "@testSetup",
+      "@AuraEnabled",
+      "@Future",
+      "@InvocableMethod"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 31,
+    "part": "Part 2 — Multiple Choice Questions",
+    "type": "mcq",
+    "category": "Async Apex — Future Methods",
+    "scenario": "A developer wants to execute an HTTP callout asynchronously from Apex using a Future Method.",
+    "question": "Which annotation should be used to allow a Future Method to perform HTTP callouts?",
+    "options": [
+      "@future",
+      "@future(callout=true)",
+      "@isTest",
+      "@AuraEnabled"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 32,
+    "part": "Part 2 — Multiple Choice Questions",
+    "type": "mcq",
+    "category": "Async Apex — Batch Apex",
+    "scenario": "A company needs to process 300,000 Account records asynchronously. The developer wants to divide the records into smaller groups for processing.",
+    "question": "Which Batch Apex method is responsible for processing each group of records?",
+    "options": [
+      "start()",
+      "execute()",
+      "finish()",
+      "schedule()"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 33,
+    "part": "Part 2 — Multiple Choice Questions",
+    "type": "mcq",
+    "category": "Async Apex — Batch Apex",
+    "scenario": "A developer implements Batch Apex and wants to retrieve a large number of records for processing without being restricted by the normal SOQL query row limit.",
+    "question": "Which return type can be used in the start() method to retrieve up to 50 million records?",
+    "options": [
+      "List<sObject>",
+      "Set<Id>",
+      "Database.QueryLocator",
+      "Map<Id, sObject>"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 34,
+    "part": "Part 2 — Multiple Choice Questions",
+    "type": "mcq",
+    "category": "Async Apex — Schedulable Apex",
+    "scenario": "A company wants to execute an Apex class automatically every Sunday at midnight.",
+    "question": "Which interface should the Apex class implement to schedule its execution?",
+    "options": [
+      "Database.Batchable",
+      "Queueable",
+      "Schedulable",
+      "Database.Stateful"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 35,
+    "part": "Part 2 — Multiple Choice Questions",
+    "type": "mcq",
+    "category": "Async Apex — Queueable Apex",
+    "scenario": "A developer needs to execute an asynchronous process that accepts a complex Apex object as input and wants to monitor the execution through a job ID.",
+    "question": "Which method is used to submit a Queueable Apex job?",
+    "options": [
+      "System.schedule()",
+      "System.enqueueJob()",
+      "Database.executeBatch()",
+      "System.future()"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 36,
+    "part": "Part 2 — Multiple Choice Questions",
+    "type": "mcq",
+    "category": "Async Apex — Monitoring Jobs",
+    "scenario": "A developer has submitted a Queueable Apex job and wants to check whether the job is queued, processing, completed, or failed.",
+    "question": "Which Salesforce object stores information about asynchronous Apex jobs?",
+    "options": [
+      "CronTrigger",
+      "AsyncApexJob",
+      "ApexClass",
+      "ApexTestResult"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 37,
+    "part": "Part 2 — Multiple Choice Questions",
+    "type": "mcq",
+    "category": "Integration using Apex — REST Callouts",
+    "scenario": "A developer wants to send an HTTP request from Salesforce to an external REST API and receive the response.",
+    "question": "Which Apex classes are commonly used to perform an HTTP callout?",
+    "options": [
+      "Http, HttpRequest, and HttpResponse",
+      "Database, QueryLocator, and SaveResult",
+      "System, Test, and Assert",
+      "JSON, Schema, and Trigger"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 38,
+    "part": "Part 2 — Multiple Choice Questions",
+    "type": "mcq",
+    "category": "Integration using Apex — SOAP Callouts",
+    "scenario": "A company receives a WSDL file from an external banking application and wants to generate Apex classes to invoke its SOAP services.",
+    "question": "Which Salesforce tool is used to generate Apex classes from a WSDL file?",
+    "options": [
+      "Schema Builder",
+      "WSDL2Apex",
+      "Developer Console",
+      "Object Manager"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 39,
+    "part": "Part 2 — Multiple Choice Questions",
+    "type": "mcq",
+    "category": "Integration using Apex — Named Credentials and OAuth 2.0",
+    "scenario": "A developer has hardcoded an external API endpoint and authentication details inside an Apex class. The company wants to securely manage the endpoint and authentication configuration.",
+    "question": "Which Salesforce feature is recommended for managing external endpoint and authentication configuration?",
+    "options": [
+      "Custom Labels",
+      "Named Credentials",
+      "Static Resources",
+      "Custom Settings only"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 40,
+    "part": "Part 2 — Multiple Choice Questions",
+    "type": "mcq",
+    "category": "Integration using Apex — Connected Apps",
+    "scenario": "An external application needs to authenticate with Salesforce using OAuth 2.0 and access Salesforce data through REST APIs.",
+    "question": "Which Salesforce feature should be configured to enable this OAuth-based integration?",
+    "options": [
+      "Connected App",
+      "Validation Rule",
+      "Record Type",
+      "Page Layout"
+    ],
+    "answer": 0
+  },
 
   // ══════════════════════════════════════════════════════════════
   //  PART 3 — LIVE CODING — TRIGGERS  (Q41 – Q45)
